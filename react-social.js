@@ -395,10 +395,11 @@
     }
 
     , constructUrl: function () {
-      return "https://www.facebook.com/dialog/feed?"
+      return "https://www.facebook.com/dialog/share?"
              + "app_id=" + encodeURIComponent(this.props.appId)
-             + "&display=popup&caption=" + encodeURIComponent(this.props.message)
-             + "&link=" + encodeURIComponent(this.props.url)
+             + "&display=popup&quote=" + encodeURIComponent(this.props.message)
+             + "&href=" + encodeURIComponent(this.props.url)
+             + "&hashtag=" + encodeURIComponent(this.props.hashTag)
              + "&redirect_uri=" + encodeURIComponent("https://www.facebook.com/")
     }
   });
